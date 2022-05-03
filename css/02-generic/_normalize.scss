@@ -33,6 +33,7 @@ q:after {
 html, body {
     font-family: $font-primary;
     font-size: $font-size;
+    font-weight: 500;
     color: $font-color;
     background: center / cover no-repeat url('/assets/media/background.svg'), $light-pink;
     overflow-x: hidden;

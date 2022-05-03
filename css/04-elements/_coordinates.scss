@@ -1,0 +1,5 @@
+#coordinates {
+    @include size-pos(7, 4, 2);
+    background: $dark;
+    color: $white;
+}

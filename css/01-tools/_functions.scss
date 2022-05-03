@@ -28,3 +28,13 @@
 @function ratio-space ($size) {
     @return $size * 8;
 }
+
+@function cols($nb, $total: 12) {
+    $one: calc(100 / $total);
+    @return unquote(calc($nb * $one) + 'vw');
+}
+
+@function rows($nb, $total: 12) {
+    $one: calc(100 / $total);
+    @return unquote(calc($nb * $one) + 'vh');
+}

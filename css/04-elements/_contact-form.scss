@@ -1,0 +1,35 @@
+#contact-form {
+    @include size-pos(1, 8, 1);
+    background: $white;
+
+    .container {
+        margin-right: cols(2);
+        h1 {
+            margin-bottom: ratio-space(8px);
+        }
+
+        form {
+            .field {
+                margin-bottom: ratio-space(4px);
+
+                label {
+                    display: inline-block;
+                    padding-bottom: ratio-space(2px);
+                }
+
+                input, textarea {
+                    border: solid 1px $light-pink;
+                    border-radius: 5px;
+                    width: 100%;
+                    padding: ratio-space(2px);
+                    resize: none;
+
+                    &::placeholder {
+                        font-weight: 400;
+                        color: $grey;
+                    }
+                }
+            }
+        }
+    }
+}

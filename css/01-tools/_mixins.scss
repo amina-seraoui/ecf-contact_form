@@ -25,3 +25,9 @@
         src: $src;
     }
 }
+
+@mixin size-pos($span-c, $cols, $span-r) {
+    top: rows($span-r);
+    left: cols($span-c);
+    width: cols($cols);
+}
