@@ -1,0 +1,14 @@
+$light-pink: #F5DCDC;
+$white: #FFF;
+$dark: #534444;
+$grey: #7C7373;
+$burgundy: #871729;
+$pink: #C6516F;
+$gradient: linear-gradient(
+    95deg,
+    $burgundy 0,
+    rgba($pink, .75) 100%
+);
+
+$primary-color: $pink;
+

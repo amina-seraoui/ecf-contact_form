@@ -1,0 +1,39 @@
+button, input, textarea, a, input::placeholder {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+a, button, input[type="submit"] {
+    cursor: pointer;
+}
+
+q:before {
+    content: '« ';
+}
+
+q:after {
+    content: ' »';
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font: inherit;
+    color: inherit;
+    z-index: 0;
+    letter-spacing: 1px;
+
+    &::selection {
+        background: $primary-color;
+        color: $white;
+    }
+}
+
+html, body {
+    font-family: $font-primary;
+    font-size: $font-size;
+    color: $font-color;
+    background-color: $light-pink;
+    overflow-x: hidden;
+}

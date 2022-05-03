@@ -1,0 +1,24 @@
+{
+  "name": "contact-form",
+  "version": "1.0.0",
+  "description": "Réaliser un formulaire de contact, du dossier de conception à l’envoi de mail.",
+  "main": "./js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./css/style.scss ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amina-seraoui/ecf-contact_form.git"
+  },
+  "keywords": [
+    "contact",
+    "form"
+  ],
+  "author": "Amina Seraoui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amina-seraoui/ecf-contact_form/issues"
+  },
+  "homepage": "https://github.com/amina-seraoui/ecf-contact_form#readme"
+}
