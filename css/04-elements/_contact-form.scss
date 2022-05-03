@@ -45,7 +45,7 @@
                     content: attr(data-error);
                     position: absolute;
                     color: $danger-color;
-                    top: 20px;
+                    top: 20px; // label size + 4px margin
                     left: 0;
                     font-weight: 400;
                     font-style: italic;
