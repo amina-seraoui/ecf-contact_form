@@ -26,8 +26,9 @@
     }
 }
 
-@mixin size-pos($span-c, $cols, $span-r) {
+@mixin size-pos($span-c, $cols, $span-r, $rows) {
     top: rows($span-r);
     left: cols($span-c);
     width: cols($cols);
+    min-height: rows($rows);
 }

@@ -1,0 +1,12 @@
+.btn {
+    border-radius: 25px;
+    display: inline-block;
+    padding: ratio-space(2px) ratio-space(4px);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-secondary;
+    &.submit {
+        background: $gradient;
+        color: $white;
+    }
+}

@@ -1,5 +1,5 @@
 #contact-form {
-    @include size-pos(1, 8, 1);
+    @include size-pos(1, 8, 1, 9);
     background: $white;
 
     .container {
@@ -9,6 +9,9 @@
         }
 
         form {
+            @extend %flex;
+            flex-direction: column;
+
             .field {
                 margin-bottom: ratio-space(4px);
 
@@ -29,6 +32,10 @@
                         color: $grey;
                     }
                 }
+            }
+
+            .submit {
+                align-self: flex-end;
             }
         }
     }

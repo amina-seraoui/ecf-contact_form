@@ -1,0 +1,41 @@
+ul.iconified {
+    li {
+        position: relative;
+        margin-left: ratio-space(2px) + 25px;
+
+        @extend %flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 25px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 0;
+            left: - calc(ratio-space(2px) + 25px);
+        }
+
+        &.pin {
+            &::before {
+                background: top / contain url('/assets/media/icons/pin.svg') no-repeat;
+            }
+        }
+        &.mail {
+            &::before {
+                background: top / contain url('/assets/media/icons/mail.svg') no-repeat;
+            }
+        }
+        &.phone {
+            &::before {
+                background: top / contain url('/assets/media/icons/phone.svg') no-repeat;
+            }
+        }
+    }
+}
+
+ul.socials {
+    @extend %flex;
+    gap: ratio-space(4px);
+}

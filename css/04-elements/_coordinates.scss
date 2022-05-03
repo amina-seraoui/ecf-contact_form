@@ -1,5 +1,24 @@
 #coordinates {
-    @include size-pos(7, 4, 2);
+    @include size-pos(7, 4, 2, 9);
     background: $dark;
     color: $white;
+
+    .container {
+        p {
+            margin: ratio-space(4px) 0;
+        }
+
+        .iconified li {
+            font-weight: 400;
+            margin-bottom: ratio-space(4px);
+
+            h3 {
+                margin-bottom: ratio-space(1px);
+            }
+        }
+
+        .socials {
+            margin-left: ratio-space(2px) + 25px;
+        }
+    }
 }

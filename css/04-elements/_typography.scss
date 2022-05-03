@@ -4,3 +4,9 @@ h1, h2 {
     font-weight: 700;
     text-transform: capitalize;
 }
+
+h3 {
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: $font-secondary;
+}
