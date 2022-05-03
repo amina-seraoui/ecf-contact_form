@@ -1,6 +1,6 @@
 $light-pink: #F5DCDC;
 $white: #FFF;
-$dark: #534444;
+$dark-grey: #534444;
 $grey: #7C7373;
 $burgundy: #871729;
 $pink: #C6516F;
@@ -11,4 +11,5 @@ $gradient: linear-gradient(
 );
 
 $primary-color: $pink;
-
+$danger-color: $burgundy;
+$dark: $dark-grey;

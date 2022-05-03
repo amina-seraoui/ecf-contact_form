@@ -11,9 +11,11 @@
         form {
             @extend %flex;
             flex-direction: column;
+            position: relative;
 
             .field {
                 margin-bottom: ratio-space(4px);
+                position: relative;
 
                 label {
                     display: inline-block;
@@ -21,7 +23,7 @@
                 }
 
                 input, textarea {
-                    border: solid 1px $light-pink;
+                    border: solid 1px $danger-color;
                     border-radius: 5px;
                     width: 100%;
                     padding: ratio-space(2px);
@@ -32,10 +34,37 @@
                         color: $grey;
                     }
                 }
+
+                &[data-error=''], &:not(&[data-error]) {
+                    input, textarea {
+                        border: solid 1px $light-pink;
+                    }
+                }
+
+                &::before {
+                    content: attr(data-error);
+                    position: absolute;
+                    color: $danger-color;
+                    top: 20px;
+                    left: 0;
+                    font-weight: 400;
+                    font-style: italic;
+                    font-size: 10px;
+                }
             }
 
             .submit {
                 align-self: flex-end;
+            }
+
+            &::after {
+                content: attr(data-error);
+                position: absolute;
+                color: $danger-color;
+                bottom: 48px; // submit button size
+                font-weight: 400;
+                font-style: italic;
+                font-size: 14px;
             }
         }
     }
