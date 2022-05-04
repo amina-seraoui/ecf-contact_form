@@ -6,13 +6,12 @@ const message = document.querySelector('#message')
 const form = document.querySelector('form')
 const btn = document.querySelector('button')
 let sending = false
+const div = document.createElement('div')
 
 const success = () => {
     // create alert
-    const div = document.createElement('div')
     div.className = 'alert'
     div.innerText = 'Message send with success.'
-    form.appendChild(div)
 
     // empty fields
     name.value = ''
@@ -25,6 +24,8 @@ const success = () => {
 }
 
 const fail = (err) => {
+    form.removeChild(div)
+
     form.classList.remove('sending')
     form.dataset.error = 'An error occured.'
     sending = false
@@ -45,6 +46,9 @@ form.addEventListener('submit', e => {
             delete form.dataset.error
             form.classList.add('sending')
             sending = true
+
+            div.className = 'spin'
+            form.appendChild(div)
 
             fetch('/php/email.php', {
                 method: 'POST',
