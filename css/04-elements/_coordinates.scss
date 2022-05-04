@@ -2,6 +2,9 @@
     @include size-pos(7, 4, 2, 9);
     background: $dark;
     color: $white;
+    @extend %flex;
+    align-items: center;
+    transition: .2s;
 
     .container {
         p {
@@ -20,5 +23,19 @@
         .socials {
             margin-left: ratio-space(2px) + 25px;
         }
+    }
+
+    @media #{$media-down-md} {
+        top: 0;
+        left: 0;
+        width: calc(100% - cols(2));
+        margin: - ratio-space(4px) cols(0) rows(1) cols(2);
+        min-height: 0;
+    }
+
+    @media #{$media-down-sm} {
+        width: calc(100% - cols(2));
+        margin: rows(1) cols(1);
+        margin-top: - ratio-space(2px);
     }
 }

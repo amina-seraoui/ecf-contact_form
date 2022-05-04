@@ -2,6 +2,7 @@ ul.iconified {
     li {
         position: relative;
         margin-left: ratio-space(2px) + 25px;
+        word-break: break-word;
 
         @extend %flex;
         justify-content: center;

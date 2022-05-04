@@ -38,4 +38,8 @@ html, body {
     background: center / cover no-repeat url('/assets/media/background.svg'), $light-pink;
     overflow-x: hidden;
     min-height: 100vh;
+
+    @media #{$media-down-md} {
+        font-size: $font-size - 2px;
+    }
 }

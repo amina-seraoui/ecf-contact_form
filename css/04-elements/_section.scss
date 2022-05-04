@@ -7,4 +7,24 @@ section {
     .container {
         padding: ratio-space(8px);
     }
+
+    @media #{$media-down-lg} {
+        .container {
+            padding: ratio-space(6px);
+        }
+    }
+
+    @media #{$media-down-md} {
+        position: relative;
+
+        .container {
+            padding: ratio-space(8px);
+        }
+    }
+
+    @media #{$media-down-sm} {
+        .container {
+            padding: ratio-space(4px);
+        }
+    }
 }
