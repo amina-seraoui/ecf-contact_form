@@ -1,0 +1,67 @@
+form {
+    position: relative;
+    transition: .5s;
+
+    .field {
+        margin-bottom: ratio-space(4px);
+        position: relative;
+
+        label {
+            display: inline-block;
+            padding-bottom: ratio-space(2px);
+        }
+
+        input, textarea {
+            border: solid 1px $danger-color;
+            border-radius: 5px;
+            width: 100%;
+            padding: ratio-space(2px);
+            resize: none;
+
+            &::placeholder {
+                font-weight: 400;
+                color: $grey;
+            }
+        }
+
+        &[data-error=''], &:not(&[data-error]) {
+            input, textarea {
+                border: solid 1px $light-pink;
+            }
+        }
+
+        &::before {
+            content: attr(data-error);
+            position: absolute;
+            color: $danger-color;
+            top: 20px; // label size + 4px margin
+            left: 0;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 10px;
+        }
+    }
+
+    &::after {
+        content: attr(data-error);
+        position: absolute;
+        color: $danger-color;
+        bottom: 48px; // submit button size
+        font-weight: 400;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    &.sending {
+        user-select: none;
+        pointer-events: none;
+
+        .field {
+            opacity: 50%;
+        }
+
+        button[type="submit"] {
+            @extend .send;
+        }
+    }
+}

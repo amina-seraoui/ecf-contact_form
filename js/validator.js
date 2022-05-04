@@ -6,8 +6,13 @@ export const verifyName = (name) => {
         return false
     }
 
+    else if (/[`~!@#$%^&*()_|+\-=?;:",.<>\{\}\[\]\\\/]/.test(name)) {
+        fields[0].dataset.error = 'Your name cannot contain special chars (expect - \' and spaces).'
+        return false
+    }
+
     // lettres, espaces, - et ' autorisés.
-    if (!/^[\D '\-]+$/.test(name)) {
+    else if (!/^[\D '\-]+$/.test(name)) {
         fields[0].dataset.error = 'The name is not a valid name.'
         return false
     }

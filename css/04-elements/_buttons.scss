@@ -5,8 +5,15 @@
     text-transform: uppercase;
     font-weight: 700;
     font-family: $font-secondary;
+    transition: .5s;
+
     &.submit {
         background: $gradient;
         color: $white;
+    }
+
+    &.send {
+        background: $light-pink;
+        color: $dark;
     }
 }
