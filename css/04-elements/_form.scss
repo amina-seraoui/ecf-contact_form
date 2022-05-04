@@ -22,6 +22,10 @@ form {
                 font-weight: 400;
                 color: $grey;
             }
+
+            &:invalid {
+                border: solid 1px $danger-color;
+            }
         }
 
         &[data-error=''], &:not(&[data-error]) {
