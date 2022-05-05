@@ -63,9 +63,5 @@ form {
         .field {
             opacity: 50%;
         }
-
-        button[type="submit"] {
-            @extend .send;
-        }
     }
 }

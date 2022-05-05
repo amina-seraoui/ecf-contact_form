@@ -19,8 +19,9 @@ const success = () => {
     message.value = ''
 
     // button
-    btn.innerText = 'Send'
+    btn.querySelector('.text').innerText = 'Send'
     btn.disabled = true
+    btn.className = 'btn send'
 }
 
 const fail = (err) => {
@@ -29,6 +30,7 @@ const fail = (err) => {
     form.classList.remove('sending')
     form.dataset.error = 'An error occured.'
     sending = false
+    btn.className = 'btn submit'
     console.log(err)
 }
 
@@ -46,6 +48,7 @@ form.addEventListener('submit', e => {
             delete form.dataset.error
             form.classList.add('sending')
             sending = true
+            btn.className = 'btn sending'
 
             div.className = 'spin'
             form.appendChild(div)

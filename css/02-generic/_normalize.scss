@@ -26,7 +26,11 @@ q:after {
 
     &::selection {
         background: $primary-color;
-        color: $white;
+        color: $light;
+    }
+
+    &::before, &::after {
+        box-sizing: border-box;
     }
 }
 

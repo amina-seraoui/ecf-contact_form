@@ -1,19 +1,147 @@
 .btn {
+    position: relative;
     border-radius: 25px;
     display: inline-block;
-    padding: ratio-space(2px) ratio-space(4px);
     text-transform: uppercase;
     font-weight: 700;
     font-family: $font-secondary;
     transition: .5s;
+    background: none;
+    width: 12rem;
+
+    .text {
+        @extend %flex;
+        transition: .5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle {
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 1.625rem;
+        transition: .5s;
+
+        i {
+            transition: .5s;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
 
     &.submit {
-        background: $gradient;
-        color: $white;
+        color: $dark;
+
+        .circle {
+            background: $primary-color;
+            box-shadow: 1px 1px 5px $dark;
+
+            i {
+                left: 10px;
+                width: 13px;
+                height: 2px;
+                background: none;
+
+                &::before {
+                    transition: .5s;
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-top: solid 2px $light;
+                    border-right: solid 2px $light;
+                    top: -3.8px;
+                    right: .5px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &.sending {
+        pointer-events: none;
+        background: $light-pink;
+        .text {
+            margin: 0;
+            @extend .spin;
+            color: transparent;
+
+            &::before {
+                width: 20px!important;
+                height: 20px!important;
+                top: 50%!important;
+                border-color: $light-grey!important;
+                border-bottom-color: $primary-color!important;
+            }
+        }
+
     }
 
     &.send {
-        background: $light-pink;
-        color: $dark;
+        pointer-events: none;
+
+        .circle {
+            background: $light-pink;
+            width: 100%;
+
+            i {
+                right: 0;
+                width: 40px;
+                height: 40px;
+                background: center / 25px url('/assets/media/icons/check.svg') no-repeat;
+            }
+        }
+
+        .text {
+            margin: 0;
+        }
+    }
+
+    &:hover {
+        &.submit {
+            .circle {
+                width: 100%;
+
+                i {
+                    background: $white;
+                    transform: translate(1rem, 0);
+                }
+            }
+
+            .text {
+                color: $light;
+            }
+        }
+    }
+
+    &:active {
+        &.submit {
+            .circle {
+                box-shadow: none;
+                background: $light-pink;
+
+                i {
+                    background: $dark;
+                    &::before {
+                        border-color: $dark;
+                    }
+                }
+            }
+
+            .text {
+                color: $dark;
+            }
+        }
     }
 }

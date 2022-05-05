@@ -1,7 +1,7 @@
 #coordinates {
     @include size-pos(7, 4, 2, 9);
     background: $dark;
-    color: $white;
+    color: $light;
     @extend %flex;
     align-items: center;
     transition: .2s;

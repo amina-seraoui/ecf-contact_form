@@ -12,7 +12,7 @@
             @extend %flex;
             flex-direction: column;
 
-            .submit {
+            .btn {
                 align-self: flex-end;
             }
 
@@ -23,7 +23,7 @@
                 left: 0;
                 width: 100%;
                 background: $dark;
-                color: $white;
+                color: $light;
                 text-align: center;
                 padding: ratio-space(8px) 0;
                 border-radius: 15px;
