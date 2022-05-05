@@ -31,6 +31,7 @@ if ($success && !verifyMsg($message)) {
 if ($success) {
     $headers = 'From: ' . $mail . "\r\n" .
         'Reply-To: '. $mail;
+
     $webmaster = 'amina.seraoui.31@gmail.com';
 
     $subject = 'New message from ' . $name;

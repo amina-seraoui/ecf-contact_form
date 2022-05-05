@@ -29,7 +29,7 @@
                 attributeName="stop-color"
                 from="#F5DCDC"
                 to="#94001A"
-                dur="5s"
+                dur="1.5s"
                 fill="freeze"
         />
     </stop>

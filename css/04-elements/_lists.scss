@@ -6,8 +6,32 @@ ul.iconified {
 
         @extend %flex;
         justify-content: center;
+        align-items: flex-start;
         flex-direction: column;
         min-height: 25px;
+
+        a {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                background: $primary-color;
+                transform: skew(22deg);
+                height: .5em;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                transition: .3s;
+                z-index: -1;
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
 
         &::before {
             content: '';
@@ -16,21 +40,40 @@ ul.iconified {
             height: 25px;
             top: 0;
             left: - calc(ratio-space(2px) + 25px);
+            transition: .2s;
         }
 
         &.pin {
             &::before {
                 background: top / contain url('/assets/media/icons/pin.svg') no-repeat;
             }
+
+            &:hover {
+                &::before {
+                    background-image: url('/assets/media/icons/pin-w.svg');
+                }
+            }
         }
         &.mail {
             &::before {
                 background: top / contain url('/assets/media/icons/mail.svg') no-repeat;
             }
+
+            &:hover {
+                &::before {
+                    background-image: url('/assets/media/icons/mail-w.svg');
+                }
+            }
         }
         &.phone {
             &::before {
                 background: top / contain url('/assets/media/icons/phone.svg') no-repeat;
+            }
+
+            &:hover {
+                &::before {
+                    background-image: url('/assets/media/icons/phone-w.svg');
+                }
             }
         }
     }
@@ -39,4 +82,36 @@ ul.iconified {
 ul.socials {
     @extend %flex;
     gap: ratio-space(4px);
+
+    li {
+        transition: .2s;
+
+        a {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+        }
+
+        &.facebook {
+            background: top / contain url('/assets/media/icons/facebook.svg') no-repeat;
+            &:hover {
+                background-image: url('/assets/media/icons/facebook-c.svg');
+            }
+        }
+
+        &.instagram {
+            background: top / contain url('/assets/media/icons/instagram.svg') no-repeat;
+            &:hover {
+                background-image: url('/assets/media/icons/instagram-c.svg');
+            }
+        }
+
+        &.twitter {
+            background: top / contain url('/assets/media/icons/twitter.svg') no-repeat;
+            &:hover {
+                background-image: url('/assets/media/icons/twitter-c.svg');
+            }
+        }
+    }
+
 }
